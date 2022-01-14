@@ -1,0 +1,15 @@
+{
+    "configuracion": [
+        {
+            "Offset X": "0",
+            "Offset Y": "-100",
+            "Width Hoja": "0.210",
+            "Distancia Blanco": "25",
+            "Cuadrado Mote": "0.03",
+            "Cantidad Disparos": "6",
+	    "Descripcion": "DISTANCIA:\t\t 300m 275m 250m 225m - 200m 175m 150m 130m - 115m 100m 85m 70m - 60m 50m 40m 30m - 25m 20m 15m 10m \rBLANCO:\t\tC2\rTIEMPO:\t\tTotal 5 Min. Marcacion al final.\rPOSICION DE TIRO:\tTAP TAP TAP TAP - TSA TSA TSA TSA - RAT RAT RAT RAT - PBL PBL PBL PBL - CYD CYD CYD CYD\rEXIGENCIA:\t\tSEIS (6) impactos directos.\r\rCLASIFICACION: \t0/5:\tNO APTO \r\t\t6/10:\tAPTO \r\t\t11/15:\tDIESTRO \r\t\t16/20:\tEXPERTO",
+            "Imagen": "condicion.jpg",
+            "Video": "unity.mp4"
+        }
+    ]
+}

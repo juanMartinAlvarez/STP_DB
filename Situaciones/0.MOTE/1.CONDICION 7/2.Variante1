@@ -1,0 +1,15 @@
+{
+    "configuracion": [
+        {
+            "Offset X": "0",
+            "Offset Y": "-100",
+            "Width Hoja": "0.210",
+            "Distancia Blanco": "25",
+            "Cuadrado Mote": "0.03",
+            "Cantidad Disparos": "6",
+	    "Descripcion": "DISTANCIA:\t\t50m \rBLANCO:\t\tA1 \rTIEMPO:\t\tSin limitacion \rPOSICION DE TIRO:\tPBL \rEXIGENCIA:\t\tAgrupar los 3 impactos de la 2da serie en un reacudro de 30x30cm. 2 de ellos,\r\t\tdentro de la silueta.",
+            "Imagen": "condicion.jpg",
+            "Video": "unity.mp4"
+        }
+    ]
+}

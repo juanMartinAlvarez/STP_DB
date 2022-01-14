@@ -1,0 +1,15 @@
+{
+    "configuracion": [
+        {
+            "Offset X": "0",
+            "Offset Y": "-100",
+            "Width Hoja": "0.210",
+            "Distancia Blanco": "25",
+            "Cuadrado Mote": "0.03",
+            "Cantidad Disparos": "6",
+	    "Descripcion": "DISTANCIA:\t\t25m\rBLANCO:\t\tE2\rTIEMPO:\t\t90 seg(incluyendo los cbios de cargador). Marcacion al final.\rPOSICION DE TIRO:\tRAT 125m - 100m PBL 75m - 50m Reaccion flanco derecho.\rEXIGENCIA:\t\tCUATRO (4) impactos directos (computo maximo en cada silueta 2 impactos).",
+            "Imagen": "condicion.jpg",
+            "Video": "unity.mp4"
+        }
+    ]
+}

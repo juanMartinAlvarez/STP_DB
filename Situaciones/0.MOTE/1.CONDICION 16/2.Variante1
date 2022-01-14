@@ -1,0 +1,15 @@
+{
+    "configuracion": [
+        {
+            "Offset X": "0",
+            "Offset Y": "-100",
+            "Width Hoja": "0.210",
+            "Distancia Blanco": "25",
+            "Cuadrado Mote": "0.03",
+            "Cantidad Disparos": "6",
+	    "Descripcion": "DISTANCIA:\t\t25m\rBLANCO:\t\tE3\rTIEMPO:\t\t90 seg(incluyendo los cambios de cargador). Marcacion al final.\rPOSICION DE TIRO:\tTAP 300m 250m, TSA 200m 150\rEXIGENCIA:\t\tCUATRO (4) impactos directos (computo maximo en cada silueta 2 impactos).",
+            "Imagen": "condicion.jpg",
+            "Video": "unity.mp4"
+        }
+    ]
+}

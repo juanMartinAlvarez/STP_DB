@@ -1,0 +1,15 @@
+{
+    "configuracion": [
+        {
+            "Offset X": "0",
+            "Offset Y": "-100",
+            "Width Hoja": "0.210",
+            "Distancia Blanco": "25",
+            "Cuadrado Mote": "0.03",
+            "Cantidad Disparos": "6",
+	    "Descripcion": "DISTANCIA:\t\t 200m - 175m - 150m - 125m \rBLANCO:\t\tC2\rTIEMPO:\t\t90 seg (Incluye desplaz, adopcion de pos(s) y cbio(s) de cargador). Marcacion al final.\rPOSICION DE TIRO:\tToma y cbio de pos de los 200m y se detiene a c/dist. Adopta la posición TSA\rEXIGENCIA:\t\tDOS (2) impactos directos.",
+            "Imagen": "condicion.jpg",
+            "Video": "unity.mp4"
+        }
+    ]
+}

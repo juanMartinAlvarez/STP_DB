@@ -1,0 +1,15 @@
+{
+    "configuracion": [
+        {
+            "Offset X": "0",
+            "Offset Y": "-100",
+            "Width Hoja": "0.210",
+            "Distancia Blanco": "25",
+            "Cuadrado Mote": "0.03",
+            "Cantidad Disparos": "6",
+	    "Descripcion": "DISTANCIA:\t\t25m \rBLANCO:\t\tE1 \rTIEMPO:\t\t180 seg \rPOSICION DE TIRO:\tTAP(250) - TSA(150) - RAT(100) - PBL(50) \rEXIGENCIA:\t\tSIETE (7) impactos directos dentro de las siluetas. Al menos uno en c/ silueta. \r\t\tNo se contabilizaran mas de 3 impactos en c/ silueta",
+            "Imagen": "condicion.jpg",
+            "Video": "unity.mp4"
+        }
+    ]
+}

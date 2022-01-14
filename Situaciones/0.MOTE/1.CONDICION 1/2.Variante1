@@ -1,0 +1,15 @@
+{
+    "configuracion": [
+        {
+            "Offset X": "0",
+            "Offset Y": "-100",
+            "Width Hoja": "0.210",
+            "Distancia Blanco": "25",
+            "Cuadrado Mote": "0.03",
+            "Cantidad Disparos": "6",
+            "Descripcion": "DISTANCIA:\t\t25m \rBLANCO:\t\tA4 \rTIEMPO:\t\tSin limitacion \rPOSICION DE TIRO:\tTAG \rEXIGENCIA:\t\t2 Grupos de 3 impactos superpuestos, agrupados en un recuadro de 3x3cm.",
+            "Imagen": "condicion.jpg",
+            "Video": "unity.mp4"
+        }
+    ]
+}
