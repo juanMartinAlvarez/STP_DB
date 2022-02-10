@@ -2,9 +2,11 @@ from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtUiTools import QUiLoader
 
 class listaDeUsuarios():
-    def __init__(self, parent):
+    def __init__(self, parent, db_ui):
         self.parent = parent
-        self = parent
+        
+        self.db_ui = db_ui
+        self.db_ui.dRegistrarUsuario.setEnabled(False)
         print("init lista")        
         #parent.parent.VBox.addWidget(self.usuarios_widget,5)
         #parent.VBox.setContentsMargins(0, 0, 0, 0)
