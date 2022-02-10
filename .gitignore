@@ -1,3 +1,6 @@
+# PY
+__pycache__/
+
 # C++ objects and libs
 *.slo
 *.lo
@@ -31,6 +34,9 @@ Makefile*
 *build-*
 *.qm
 *.prl
+*.pyc
+*~
+*.swp
 
 # Qt unit tests
 target_wrapper.*
