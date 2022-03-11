@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="Player">
+    <file>MyIconos/IconoPlay3.png</file>
+    <file>MyIconos/IconoFinal.png</file>
+    <file>MyIconos/IconoPlay2.png</file>
+    <file>MyIconos/IconoDer.jpg</file>
+    <file>MyIconos/IconoIzq.jpg</file>
+    <file>MyIconos/IconoCruz.png</file>
+    <file>MyIconos/Icono Play3.jpg</file>
+    <file>MyIconos/Conjunto Reproduccion.png</file>
+    <file>MyIconos/IconoInicio.png</file>
+    <file>MyIconos/IconoInicio.png</file>
+    <file>MyIconos/IconoPlay.png</file>
+    <file>MyIconos/IconPause.png</file>
+    <file>MyIconos/IconPause2.png</file>
+    <file>MyIconos/IconoFinal.png</file>
+  </qresource>
+</RCC>

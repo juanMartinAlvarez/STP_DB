@@ -1,0 +1,27 @@
+<RCC>
+  <qresource prefix="/Imagnes MainSTP">
+    <file>MyIconos/Configuracion3.png</file>
+    <file>MyIconos/BD2.png</file>
+    <file>MyIconos/Reproducir2.png</file>
+    <file>MyIconos/shooting2.png</file>
+    <file>MyIconos/BlancoAlineacion3.png</file>
+    <file>MyIconos/window-close-regular.svg</file>
+    <file>MyIconos/times-circle-regular.svg</file>
+    <file>MyIconos/times-circle-solid.svg</file>
+    <file>MyIconos/times-solid.svg</file>
+    <file>MyIconos/BlancoAlineacion2.png</file>
+    <file>MyIconos/BlancoAlineacion.png</file>
+    <file>MyIconos/IconoSalir.png</file>
+    <file>MyIconos/BD.png</file>
+    <file>MyIconos/Reproducir.png</file>
+    <file>MyIconos/Configuracion1_192p.svg</file>
+    <file>MyIconos/Configuracion2_144p.png</file>
+    <file>MyIconos/Soporte_120p.svg</file>
+    <file>MyIconos/shooting.png</file>
+  </qresource>
+  <qresource prefix="Camuflajes">
+    <file>MyIconos/Camouflage_azul.jpg</file>
+    <file>MyIconos/Camouflage_verde.png</file>
+    <file>MyIconos/Camuflaje_marron.jpg</file>
+  </qresource>
+</RCC>

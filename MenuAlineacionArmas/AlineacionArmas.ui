@@ -7,18 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>1360</width>
-    <height>375</height>
+    <height>385</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #232F3E;
+   <string notr="true">/*background-color: #232F3E;*/
 
 QWidget{
 	background-color: #232F3E;
 }
+
 QFrame{
 	/*background-color: rgb(180, 180, 200);*/
 	border: 0
@@ -44,9 +45,17 @@ QRadioButton::indicator:unchecked {
     background-color:#fff;
     border-radius: 6px;
 }
-</string>
+
+QComboBox{
+    border: 2px solid  rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+QLineEdit{
+    border: 2px solid  rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="labelTituloAlineacion">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -66,29 +75,10 @@ QRadioButton::indicator:unchecked {
     <string notr="true">color: rgb(220, 220, 220);</string>
    </property>
    <property name="text">
-    <string>Alineacion de Armas</string>
+    <string>Alineación de Armas</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>340</y>
-     <width>40</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Nota:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="labelNOTA">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -104,10 +94,10 @@ QRadioButton::indicator:unchecked {
     <string>NOTA: Los Fusiles FAL para condiciones de tiro MOTE no se calibran</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButtonArriba">
    <property name="geometry">
     <rect>
-     <x>950</x>
+     <x>960</x>
      <y>100</y>
      <width>40</width>
      <height>40</height>
@@ -124,10 +114,10 @@ QRadioButton::indicator:unchecked {
      <normaloff>:/Imagnes MainSTP/MyIconos/FlechaArriba.png</normaloff>:/Imagnes MainSTP/MyIconos/FlechaArriba.png</iconset>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButtonAbajo">
    <property name="geometry">
     <rect>
-     <x>950</x>
+     <x>960</x>
      <y>200</y>
      <width>40</width>
      <height>45</height>
@@ -145,10 +135,10 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
      <normaloff>:/Imagnes MainSTP/MyIconos/FlechaAbajo.png</normaloff>:/Imagnes MainSTP/MyIconos/FlechaAbajo.png</iconset>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="pushButtonIzquierda">
    <property name="geometry">
     <rect>
-     <x>900</x>
+     <x>910</x>
      <y>150</y>
      <width>40</width>
      <height>40</height>
@@ -165,10 +155,10 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
      <normaloff>:/Imagnes MainSTP/MyIconos/FlechaIzq.png</normaloff>:/Imagnes MainSTP/MyIconos/FlechaIzq.png</iconset>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="pushButtonDerecha">
    <property name="geometry">
     <rect>
-     <x>1000</x>
+     <x>1010</x>
      <y>150</y>
      <width>40</width>
      <height>40</height>
@@ -185,10 +175,10 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
      <normaloff>:/Imagnes MainSTP/MyIconos/FlechaDer.png</normaloff>:/Imagnes MainSTP/MyIconos/FlechaDer.png</iconset>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="labelPosicionDelBlanco">
    <property name="geometry">
     <rect>
-     <x>880</x>
+     <x>890</x>
      <y>70</y>
      <width>181</width>
      <height>16</height>
@@ -230,17 +220,7 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QGraphicsView" name="graphicsView">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>180</y>
-     <width>271</width>
-     <height>141</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="pushButtonSalir">
    <property name="geometry">
     <rect>
      <x>1334</x>
@@ -279,10 +259,10 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_10">
+  <widget class="QPushButton" name="pushButtonCentrar">
    <property name="geometry">
     <rect>
-     <x>950</x>
+     <x>960</x>
      <y>150</y>
      <width>40</width>
      <height>40</height>
@@ -302,21 +282,34 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>180</x>
      <y>60</y>
-     <width>271</width>
-     <height>111</height>
+     <width>591</width>
+     <height>231</height>
     </rect>
    </property>
-   <layout class="QFormLayout" name="formLayout">
-    <property name="verticalSpacing">
-     <number>10</number>
-    </property>
+   <layout class="QGridLayout" name="gridLayout">
     <property name="topMargin">
      <number>10</number>
     </property>
+    <property name="horizontalSpacing">
+     <number>30</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>20</number>
+    </property>
+    <item row="2" column="0">
+     <widget class="QLabel" name="labelTipoArma">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(220, 220, 220);</string>
+      </property>
+      <property name="text">
+       <string>Tipo de Arma</string>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="0">
-     <widget class="QLabel" name="label_9">
+     <widget class="QLabel" name="labelNroPantalla">
       <property name="styleSheet">
        <string notr="true">color: rgb(220, 220, 220);</string>
       </property>
@@ -325,55 +318,20 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="1">
-     <widget class="QComboBox" name="comboBox_3"/>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_7">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(220, 220, 220);</string>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="pushButtonAlineacionArma">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
-      <property name="text">
-       <string>Linea / Tirador</string>
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>40</height>
+       </size>
       </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QComboBox" name="comboBox"/>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="label_8">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(220, 220, 220);</string>
-      </property>
-      <property name="text">
-       <string>Arma</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QComboBox" name="comboBox_2"/>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>580</x>
-     <y>60</y>
-     <width>181</width>
-     <height>191</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <property name="spacing">
-     <number>10</number>
-    </property>
-    <property name="sizeConstraint">
-     <enum>QLayout::SetDefaultConstraint</enum>
-    </property>
-    <item>
-     <widget class="QPushButton" name="pushButton_6">
       <property name="font">
        <font>
         <pointsize>10</pointsize>
@@ -386,12 +344,24 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
        <string notr="true">color: rgb(220, 220, 220);</string>
       </property>
       <property name="text">
-       <string>Alineacion de Arma</string>
+       <string>Alineación de Arma</string>
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_7">
+    <item row="1" column="3">
+     <widget class="QPushButton" name="pushButtonSalvarAlineacion">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>40</height>
+       </size>
+      </property>
       <property name="font">
        <font>
         <pointsize>10</pointsize>
@@ -401,12 +371,34 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
        <string notr="true">color: rgb(220, 220, 220);</string>
       </property>
       <property name="text">
-       <string>Salvar Alineacion</string>
+       <string>Salvar Alineación</string>
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_8">
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboBox_3">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QPushButton" name="pushButtonBorrarAlineacion">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>40</height>
+       </size>
+      </property>
       <property name="font">
        <font>
         <pointsize>10</pointsize>
@@ -416,12 +408,67 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
        <string notr="true">color: rgb(220, 220, 220);</string>
       </property>
       <property name="text">
-       <string>Borrar Alineacion</string>
+       <string>Borrar Alineación</string>
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_9">
+    <item row="2" column="1">
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelNroLineaTirador">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(220, 220, 220);</string>
+      </property>
+      <property name="text">
+       <string>Nro. Linea / Tirador</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="comboBox">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="pushButtonVerificacion">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>40</height>
+       </size>
+      </property>
       <property name="font">
        <font>
         <pointsize>10</pointsize>
@@ -431,7 +478,7 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
        <string notr="true">color: rgb(220, 220, 220);</string>
       </property>
       <property name="text">
-       <string>Verificacion</string>
+       <string>Verificación</string>
       </property>
      </widget>
     </item>
@@ -440,7 +487,7 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>880</x>
+     <x>890</x>
      <y>260</y>
      <width>181</width>
      <height>84</height>
@@ -448,7 +495,7 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
    </property>
    <layout class="QFormLayout" name="formLayout_2">
     <property name="horizontalSpacing">
-     <number>10</number>
+     <number>20</number>
     </property>
     <property name="topMargin">
      <number>10</number>
@@ -457,7 +504,7 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
      <number>10</number>
     </property>
     <item row="0" column="0">
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="labelCoordenadaX">
       <property name="styleSheet">
        <string notr="true">color: rgb(220, 220, 220);</string>
       </property>
@@ -467,10 +514,17 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="lineEditCoordenadaX">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QLabel" name="label_6">
+     <widget class="QLabel" name="labelCoordenadaY">
       <property name="styleSheet">
        <string notr="true">color: rgb(220, 220, 220);</string>
       </property>
@@ -480,7 +534,14 @@ border-image: url(:/Imagnes MainSTP/MyIconos/FlechaAbajo.png);</string>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_2"/>
+     <widget class="QLineEdit" name="lineEditCoordenadaY">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>25</height>
+       </size>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

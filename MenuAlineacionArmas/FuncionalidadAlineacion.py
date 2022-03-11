@@ -12,7 +12,7 @@ class Alineacion():
         self.setFixedHeight(500)
         
         
-    def saliralineacion(self):
+    def salirAlineacion(self):
         print("Salir Alineacion")
         self.parent.main_ui.EjerEvalButton.setEnabled(True)
         self.parent.main_ui.ReproducirButton.setEnabled(True)

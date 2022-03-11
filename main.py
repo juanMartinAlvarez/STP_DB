@@ -6,7 +6,7 @@ import sys
 from PySide2.QtWidgets import QStyleFactory
 
 #Import ui y configuraciones
-import MenuConfiguracionSistema.ConfigWindow as ConfigWindow
+import MenuConfiguracionSistema.ConfiguracionGral as ConfiguracionGral
 import MenuAlineacionArmas.FuncionalidadAlineacion as funcalineacion
 import ConfigSituacion.FuncionalidadEjercitacion as funcejercitacion
 import DB.DB as funcDB
@@ -14,19 +14,28 @@ import MenuCtrlVisualizacion.Reproduccion as Reproduccion
 import RecursosSTPUI_rc
     
 class MainWidget(QtWidgets.QWidget):
+	
+		
     def __init__(self, screen):
         super().__init__()
+                   
         
         #Conexion con MADST
         self.UDP_IP = "127.0.0.1"
         self.UDP_PORT = 5557
         self.UDP_RECV = 5558
+        
+        self.disparos=[]
 
         self.socket_madst = socket.socket(socket.AF_INET, # Internet
                      socket.SOCK_DGRAM) # UDP
         self.sock_recv = socket.socket(socket.AF_INET, # Internet
                      socket.SOCK_DGRAM) # UDP
+
+        self.udp_madst = (self.UDP_IP, self.UDP_PORT)
+        
         self.sock_recv.bind((self.UDP_IP,self.UDP_RECV))
+        
         self.sock_recv.settimeout(0.01)
         self.timer = QtCore.QTimer()
         self.timer.start(1)
@@ -37,6 +46,7 @@ class MainWidget(QtWidgets.QWidget):
         # setup address widget
         self.main_widget = QtWidgets.QWidget()
         loader = QUiLoader()
+        
         
         # Setup QVBox Main Layout
         self.VBox = QtWidgets.QVBoxLayout(self)
@@ -68,7 +78,7 @@ class MainWidget(QtWidgets.QWidget):
         self.main_ui.SalirGral.clicked.connect(self.salir)
         
     def clickConfig(self):
-        self.config = ConfigWindow.configwindow(self, self.screen, self.socket_madst, (self.UDP_IP, self.UDP_PORT))
+        self.config = ConfiguracionGral.ConfiguracionGral(self, self.screen, self.socket_madst, self.udp_madst)
         self.config.show()
         
     def Alineacion(self):
@@ -77,7 +87,7 @@ class MainWidget(QtWidgets.QWidget):
         self.main_ui.ReproducirButton.setEnabled(False)
         self.main_ui.BaseDatosButton.setEnabled(False)
         self.main_ui.ConfiguracionButton.setEnabled(False)
-        self.alineacion_ui.pushButton_5.clicked.connect(self.funcAlineacion.saliralineacion)
+        self.alineacion_ui.pushButtonSalir.clicked.connect(self.funcAlineacion.salirAlineacion)
         
     def Ejercitacion(self):
         self.main_ui.AlineacionButton.setEnabled(False)
@@ -87,7 +97,8 @@ class MainWidget(QtWidgets.QWidget):
         self.main_ui.BaseDatosButton.setEnabled(False)
         self.configsituacion_ui.SalirEjercitacion.clicked.connect(self.funcEjercitacion.salirejercitacion)
         self.configsituacion_ui.QSituacionSelect.selectionModel().selectionChanged.connect(self.funcEjercitacion.on_selection_changed)
-           
+        self.configsituacion_ui.ButtonOK.clicked.connect(self.funcEjercitacion.iniciarEnsayo)
+        
     def DB(self):
         self.main_ui.AlineacionButton.setEnabled(False)
         self.main_ui.EjerEvalButton.setEnabled(False)
@@ -99,7 +110,7 @@ class MainWidget(QtWidgets.QWidget):
         self.DB_ui.bBackUp.clicked.connect(self.funcDB.backUp)
         self.DB_ui.cEditarPerfil.clicked.connect(self.funcDB.editarPerfil)
         self.DB_ui.dRegistrarUsuario.clicked.connect(self.funcDB.registrarUsusario)
-
+    
     def Reproducir(self):
         self.main_ui.AlineacionButton.setEnabled(False)
         self.main_ui.EjerEvalButton.setEnabled(False)
@@ -114,18 +125,20 @@ class MainWidget(QtWidgets.QWidget):
              dato = json.loads(dato)
              respuesta = dato['responseType']
              estado = dato['madstState']
-             self.labelEstado.setText("Estado MADST: " + estado)
-             self.labelRespuesta.setText("Respuesta MADST: " + respuesta)
+             #self.labelEstado.setText("Estado MADST: " + estado)
+             #self.labelRespuesta.setText("Respuesta MADST: " + respuesta)
              try:
-                 if (len(dato['sensed_shots'])): 
+                 if (len(dato['sensed_shots'])):
                     self.disparos.append(dato['sensed_shots'])
-                    #print (dato['sensed_shots'])    
+                    #print(self.disparos)
+                        
              except Exception as e:
                  print (e)
         except Exception as e:
             pass
         
     def salir(self):
+        
         self.close()
         
     def closeEvent(self, event):
@@ -136,6 +149,10 @@ class MainWidget(QtWidgets.QWidget):
             pass
         try:
             self.reproduccion.close()
+        except:
+            pass
+        try:
+            self.funcEjercitacion.salirejercitacion()
         except:
             pass
 

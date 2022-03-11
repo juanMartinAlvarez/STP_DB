@@ -1,0 +1,18 @@
+{
+    "configuracion": [
+        {
+            "Tiempo de Exposici\u00f3n": "10000",
+            "Cuadros por segundo": "30",
+            "Tiempo Laser ON [us]": "3000",
+            "Distancia Tirador Pantalla": "5",
+            "Tiempo entre disparos [ms]": "0",
+            "Resoluci\u00f3n Proyector": "1920x1080",
+            "Resoluci\u00f3n Camara": "3840x2160",
+            "Cantidad de Tiradores": "2",
+            "Distancia Camara Proyector": "6",
+            "Ancho Pantalla [m]": "4",
+            "Cant. Pulsos disparo falso": "0",
+            "Escala Resultado": "1"
+        }
+    ]
+}
