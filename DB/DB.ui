@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1360</width>
-    <height>546</height>
+    <height>545</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,7 +40,7 @@ QWidget
    <property name="bottomMargin">
     <number>0</number>
    </property>
-   <item alignment="Qt::AlignLeft">
+   <item>
     <widget class="QFrame" name="buttons">
      <property name="enabled">
       <bool>true</bool>
@@ -160,6 +160,9 @@ QPushButton::checked{
          <bool>false</bool>
         </property>
         <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
          <bool>false</bool>
         </property>
         <property name="flat">
@@ -410,12 +413,21 @@ QPushButton::checked{
        </widget>
       </item>
       <item>
-       <widget class="QFrame" name="screen">
+       <widget class="QFrame" name="stage">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>1160</width>
+          <height>16777215</height>
+         </size>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -423,6 +435,7 @@ QPushButton::checked{
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
+        <layout class="QGridLayout" name="gridLayout"/>
        </widget>
       </item>
      </layout>
