@@ -3,10 +3,20 @@ from PySide2.QtWidgets import (
     QApplication, QVBoxLayout, QSpacerItem, QSizePolicy
     )
 from PySide2.QtUiTools import (QUiLoader)
+import DB.conexion as conexion
 
 class listaDeUsuarios():
     def __init__(self, db_ui):
         self.db_ui = db_ui
+
+    def conectarDB(self):
+        self.version = conexion.RegistroDatos("")
+        self.version.close()
+
+    def crea_tabla(self):
+        consulta = '''CREATE TABLE IF NOT EXISTS user (ID INT PRIMARY KEY NOT NULL, FNAME TEXT CHAR (50),  LNAME TEXT CHAR (50), DNI TEXT  CHAR (50) );'''
+        self.version = conexion.RegistroDatos(consulta)
+        self.version.close()
 
     def buttonDown(self, state):
         self.state = state
