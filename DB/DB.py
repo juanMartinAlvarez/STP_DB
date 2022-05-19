@@ -1,5 +1,5 @@
-from PySide2 import QtCore, QtGui, QtWidgets
-from PySide2.QtUiTools import QUiLoader
+"""from PySide2 import QtCore, QtGui, QtWidgets
+from PySide2.QtUiTools import QUiLoader"""
 import DB.listaDeUsuarios as mostrar
 import DB.backUp as backUp
 import DB.perfilDeUsuario as editar
@@ -51,10 +51,10 @@ class DB():
         self.parent.main_ui.ConfiguracionButton.setEnabled(True)
         self.parent.main_ui.BaseDatosButton.setEnabled(True)
         #-Reset butttons Data Base
-        self.parent.DB_ui.aListaDeUsuarios.setChecked(False)
-        self.parent.DB_ui.bBackUp.setChecked(False)
-        self.parent.DB_ui.cEditarPerfil.setChecked(False)
-        self.parent.DB_ui.dRegistrarUsuario.setChecked(False)
+        self.parent.DB_ui.Eliminar_btn.setChecked(False)
+        self.parent.DB_ui.BackUp_btn.setChecked(False)
+        self.parent.DB_ui.Editar_btn.setChecked(False)
+        self.parent.DB_ui.Registrar_btn.setChecked(False)
         self.parent.DB_widget.setParent(None)
         #-Fix window
         self.parent.setFixedHeight(100)
