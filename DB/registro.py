@@ -11,7 +11,7 @@ class registroDeUsuario():
 
     def buttonDown(self, state):
         self.state = state
-        self.db_ui.aListaDeUsuarios.setAutoExclusive( self.state)
-        self.db_ui.bBackUp.setAutoExclusive( self.state)
-        self.db_ui.cEditarPerfil.setAutoExclusive( self.state)
-        self.db_ui.dRegistrarUsuario.setAutoExclusive( self.state)
+        self.db_ui.Eliminar_btn.setAutoExclusive( self.state)
+        self.db_ui.BackUp_btn.setAutoExclusive( self.state)
+        self.db_ui.Editar_btn.setAutoExclusive( self.state)
+        self.db_ui.Registrar_btn.setAutoExclusive( self.state)

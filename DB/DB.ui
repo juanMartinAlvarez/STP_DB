@@ -155,7 +155,7 @@ QPushButton#salir{
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="dRegistrarUsuario">
+       <widget class="QPushButton" name="Registrar_btn">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -196,7 +196,7 @@ QPushButton#salir{
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="aListaDeUsuarios">
+       <widget class="QPushButton" name="Eliminar_btn">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -247,7 +247,7 @@ QPushButton#salir{
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="cEditarPerfil">
+       <widget class="QPushButton" name="Editar_btn">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -288,7 +288,7 @@ QPushButton#salir{
        </widget>
       </item>
       <item alignment="Qt::AlignRight">
-       <widget class="QPushButton" name="bBackUp">
+       <widget class="QPushButton" name="BackUp_btn">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
           <horstretch>0</horstretch>
