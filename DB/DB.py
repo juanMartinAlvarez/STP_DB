@@ -1,9 +1,10 @@
 """from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtUiTools import QUiLoader"""
 import DB.listaDeUsuarios as mostrar
-import DB.backUp as backUp
-import DB.perfilDeUsuario as editar
 import DB.registro as login
+import DB.eliminarUsuario as eliminar
+import DB.perfilDeUsuario as editar
+import DB.backUp as backUp
 
 class DB():
     def __init__(self, parent):
@@ -20,13 +21,16 @@ class DB():
         #-Initialize classes
         self.usuarios = mostrar.listaDeUsuarios(self.parent.DB_ui)
         self.registro = login.registroDeUsuario(self.parent.DB_ui)
-        
+        self.eliminar = eliminar.eliminarUsuario(self.parent.DB_ui)
         self.perfil = editar.perfilDeUsuario(self.parent.DB_ui)
         self.bkUp = backUp.backUp(self.parent.DB_ui)
+
+        self.listaDeUsuarios()
 
     def listaDeUsuarios(self):
         self.usuarios.buttonDown(True)
         self.usuarios.crea_tabla()
+        self.usuarios.consultarUsuarios()
         listaDeUsuarios = self.usuarios.NombreDeUsuarios()
         listaDeDni = self.usuarios.Dni()
         self.usuarios.userUiShow(listaDeUsuarios, listaDeDni)
@@ -35,6 +39,10 @@ class DB():
         self.registro.buttonDown(True)
         self.registro.registroUiShow()
     
+    def eliminarUsuario(self):
+        self.eliminar.buttonDown(True)
+        self.eliminar.perfilUiShow()
+
     def editarPerfil(self):
         self.perfil.buttonDown(True)
         self.perfil.perfilUiShow()

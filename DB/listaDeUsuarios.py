@@ -14,7 +14,13 @@ class listaDeUsuarios():
         self.version.close()
 
     def crea_tabla(self):
-        consulta = '''CREATE TABLE IF NOT EXISTS user (ID INT PRIMARY KEY NOT NULL, FNAME TEXT CHAR (50),  LNAME TEXT CHAR (50), DNI TEXT  CHAR (50) );'''
+        consulta = '''CREATE TABLE IF NOT EXISTS user 
+        (
+            ID INT PRIMARY KEY NOT NULL, 
+            FNAME TEXT CHAR (50),  
+            LNAME TEXT CHAR (50), 
+            DNI TEXT  CHAR (50) 
+        );'''
         self.version = conexion.RegistroDatos(consulta)
         self.version.close()
 
@@ -24,6 +30,12 @@ class listaDeUsuarios():
         self.db_ui.BackUp_btn.setAutoExclusive(self.state)
         self.db_ui.Editar_btn.setAutoExclusive(self.state)
         self.db_ui.Registrar_btn.setAutoExclusive(self.state)
+    
+    def consultarUsuarios(self):
+        consulta = '''SELECT * FROM user;'''
+        self.usuarios = conexion.RegistroDatos(consulta)
+        self.usuarios.close()
+
 
     def NombreDeUsuarios(self):
         listaDeUsuarios = ["Juan Martin Alvarez","Juan Gasulla","Ricardo Telleria"]

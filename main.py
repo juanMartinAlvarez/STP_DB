@@ -106,7 +106,7 @@ class MainWidget(QtWidgets.QWidget):
         self.funcDB = funcDB.DB(self)
         self.main_ui.ConfiguracionButton.setEnabled(False)
         self.DB_ui.salir.clicked.connect(self.funcDB.salir)
-        self.DB_ui.Eliminar_btn.clicked.connect(self.funcDB.listaDeUsuarios)
+        self.DB_ui.Eliminar_btn.clicked.connect(self.funcDB.eliminarUsuario)
         self.DB_ui.BackUp_btn.clicked.connect(self.funcDB.backUp)
         self.DB_ui.Editar_btn.clicked.connect(self.funcDB.editarPerfil)
         self.DB_ui.Registrar_btn.clicked.connect(self.funcDB.registrarUsusario)
