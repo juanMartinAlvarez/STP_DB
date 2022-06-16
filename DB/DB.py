@@ -30,10 +30,6 @@ class DB():
     def listaDeUsuarios(self):
         self.usuarios.buttonDown(True)
         self.usuarios.crea_tabla()
-        self.usuarios.consultarUsuarios()
-        listaDeUsuarios = self.usuarios.NombreDeUsuarios()
-        listaDeDni = self.usuarios.Dni()
-        self.usuarios.userUiShow(listaDeUsuarios, listaDeDni)
    
     def registrarUsusario(self):
         self.registro.buttonDown(True)

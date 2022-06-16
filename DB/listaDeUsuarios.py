@@ -9,10 +9,6 @@ class listaDeUsuarios():
     def __init__(self, db_ui):
         self.db_ui = db_ui
 
-    def conectarDB(self):
-        self.version = conexion.RegistroDatos("")
-        self.version.close()
-
     def crea_tabla(self):
         consulta = '''CREATE TABLE IF NOT EXISTS user 
         (
@@ -30,17 +26,22 @@ class listaDeUsuarios():
         self.db_ui.BackUp_btn.setAutoExclusive(self.state)
         self.db_ui.Editar_btn.setAutoExclusive(self.state)
         self.db_ui.Registrar_btn.setAutoExclusive(self.state)
-    
+    """
     def consultarUsuarios(self):
         consulta = '''SELECT * FROM user;'''
         self.usuarios = conexion.RegistroDatos(consulta)
         self.usuarios.close()
-
-
+    
+        
     def NombreDeUsuarios(self):
         listaDeUsuarios = ["Juan Martin Alvarez","Juan Gasulla","Ricardo Telleria"]
         return listaDeUsuarios
-
+    """
+    def NombreDeUsuarios(self):
+        consulta = '''SELECT * FROM user;'''
+        consultaUsuarios = conexion.RegistroDatos(consulta)
+        return consultaUsuarios.listado()
+    
     def Dni(self):
         listaDni = ["29592521","25365365","15365365"]
         return listaDni
@@ -51,6 +52,7 @@ class listaDeUsuarios():
         #usuarios_ui.searchbar.textChanged.connect(self.textChanged)
         usuarios_ui.listaDeUsuarios.addItems(listaDeUsuario)
         usuarios_ui.listaDni.addItems(listaDni)
+        #usuarios_ui.listaDni.addItems(listaDni)
         usuarios_ui.show()
 
     def textChanged(self):
