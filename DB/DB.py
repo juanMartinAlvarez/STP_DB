@@ -1,5 +1,5 @@
-"""from PySide2 import QtCore, QtGui, QtWidgets
-from PySide2.QtUiTools import QUiLoader"""
+from PySide2 import QtCore, QtGui, QtWidgets
+from PySide2.QtWidgets import QTableWidgetItem
 import DB.listaDeUsuarios as mostrar
 import DB.registro as login
 import DB.eliminarUsuario as eliminar
@@ -19,33 +19,43 @@ class DB():
         self.parent.setFixedHeight(680)
 
         #-Initialize classes
+        
         self.usuarios = mostrar.listaDeUsuarios(self.parent.DB_ui)
         self.registro = login.registroDeUsuario(self.parent.DB_ui)
         self.eliminar = eliminar.eliminarUsuario(self.parent.DB_ui)
         self.perfil = editar.perfilDeUsuario(self.parent.DB_ui)
         self.bkUp = backUp.backUp(self.parent.DB_ui)
-
         self.listaDeUsuarios()
 
     def listaDeUsuarios(self):
         self.usuarios.buttonDown(True)
         self.usuarios.crea_tabla()
-   
-    def registrarUsusario(self):
-        self.registro.buttonDown(True)
-        self.registro.registroUiShow()
-    
-    def eliminarUsuario(self):
-        self.eliminar.buttonDown(True)
-        self.eliminar.perfilUiShow()
+        dbUser = self.usuarios.allUsers()
+        self.usuarios.fillTable(dbUser)
+        self.usuarios.userUiShow()
 
+    def registrarUsusario(self):
+        
+        self.registro.buttonDown(True)
+        #self.usuarios.crea_tabla()
+        self.registro.registroUiShow()
+        
+
+    def eliminarUsuario(self):
+        
+        self.eliminar.buttonDown(True)
+        self.eliminar.delUserUiShow()
+        
     def editarPerfil(self):
+        
         self.perfil.buttonDown(True)
         self.perfil.perfilUiShow()
-
+        
     def backUp(self):
+        
         self.bkUp.buttonDown(True)
         self.bkUp.bkUpUiShow()
+        
 
     def salir(self):
         #-Reset butttons Main Menu        
